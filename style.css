@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+:root {
+  /* Primary */
+
+  --Dark-cyan: #3c8067;
+  --cream: #f2ebe3;
+
+  /* Neutral */
+
+  --Very-dark-blue: #1c232b;
+  --Dark-grayish-blue: #6c7289;
+  --White: #ffffff;
+}
+
+body {
+  background-color: var(--cream);
+  max-width: 144rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 1.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.container {
+  max-width: 52.5rem;
+  width: 100%;
+  height: 40rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+
+  & .desktop-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+    -webkit-border-radius: 1rem 0 0 1rem;
+    -moz-border-radius: 1rem 0 0 1rem;
+    -ms-border-radius: 1rem 0 0 1rem;
+    -o-border-radius: 1rem 0 0 1rem;
+  }
+}
+
+.content-container {
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container,
+.content-container {
+  flex: 1 1 50%;
+}
+
+.catogery {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 1;
+  margin: 2.4rem 0rem;
+}
+
+.discounted-price {
+  font-size: 2.7rem;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 1;
+  color: var(--Dark-cyan);
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.actual-price {
+  text-decoration-line: line-through;
+  -moz-text-decoration-line: line-through;
+}
+
+.price {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  margin-block: 2rem;
+}
+
+button {
+  width: 100%;
+  height: 4.5rem;
+  align-self: center;
+  justify-self: center;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  border: none;
+  color: white;
+  background-color: var(--Dark-cyan);
+
+  &:hover {
+    background-color: var(--Very-dark-blue);
+    cursor: pointer;
+  }
+}
+
+.add-to-cart {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+
+  & img {
+    width: 6%;
+  }
+}
+
+/***** Media Query Section *****/
+@media (width <= 1440px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .mobile-image {
+    display: none;
+  }
+}
+@media (width <= 550px) {
+  html {
+    font-size: calc(62.5% * 90 / 100);
+  }
+  .mobile-image {
+    display: none;
+  }
+}
+@media (width <= 490px) {
+  html {
+    font-size: calc(62.5% * 80 / 100);
+  }
+  .mobile-image {
+    display: none;
+  }
+}
+@media (width <= 440px) {
+  html {
+    font-size: calc(62.5% * 70 / 100);
+  }
+  .mobile-image {
+    display: none;
+  }
+}
+
+@media (width <= 375px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  h1 {
+    margin-block: 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+    max-width: 31rem;
+    height: auto;
+    width: 100%;
+  }
+
+  .content-container {
+    padding: 2rem 3rem;
+  }
+
+  .price {
+    margin-block: 1rem;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+    -webkit-border-radius: 1rem 1rem 0 0;
+    -moz-border-radius: 1rem 1rem 0 0;
+    -ms-border-radius: 1rem 1rem 0 0;
+    -o-border-radius: 1rem 1rem 0 0;
+  }
+}
+
+/***** End Media Query Section *****/
